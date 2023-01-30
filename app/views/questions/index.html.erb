@@ -1,0 +1,12 @@
+<h1>Questions</h1>
+
+<% @questions.each do |question| %>
+	<h2><%= question.title %></h2>
+	<time datetime="<%= question.created_at.strftime('%Y-%m-%d %H:%M:%S') %>">
+		<%= question.created_at.strftime('%Y-%m-%d %H:%M:%S') %>
+			
+	</time>
+	<p>
+		<%= question.body %>
+	</p>
+<% end %>
