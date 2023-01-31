@@ -9,6 +9,7 @@
 	<p>
 		<%= question.body %>
 	<br />
-		<%= link_to 'Edit', edit_question_path(question) %>
+		<%= link_to 'Edit', edit_question_path(question) %> |
+		<%= link_to 'Delete', question_path(question), data: { 'turbo-method': :delete, 'turbo-confirm': 'Are you sure?' } %>
 	</p>
 <% end %>
