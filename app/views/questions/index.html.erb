@@ -3,12 +3,12 @@
 <% @questions.each do |question| %>
 	<h2><%= question.title %></h2>
 	<time datetime="<%= question.formatted_created_at %>">
-		<%= question.formatted_created_at %>
-			
+		<%= question.formatted_created_at %>		
 	</time>
 	<p>
 		<%= question.body %>
 	<br />
+		<%= link_to 'Show', question_path(question) %> |
 		<%= link_to 'Edit', edit_question_path(question) %> |
 		<%= link_to 'Delete', question_path(question), data: { 'turbo-method': :delete, 'turbo-confirm': 'Are you sure?' } %>
 	</p>
