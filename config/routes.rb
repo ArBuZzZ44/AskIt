@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :questions, only: [:index, :new, :edit, :create]
 
-  # Defines the root path route ("/")
-   root "pages#index"
-   get '/questions', to: 'questions#index' # localgost/questions 
-   get '/questions/new', to: 'questions#new'
-   post '/questions', to: 'questions#create' 
+  root "pages#index"
 end
