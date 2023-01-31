@@ -16,6 +16,10 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def edit 
+    @question = Question.find_by id: params[:id]
+  end
+
   private
 
   def question_params
