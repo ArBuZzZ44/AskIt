@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
    root "pages#index"
    get '/questions', to: 'questions#index' # localgost/questions 
+   get '/questions/new', to: 'questions#new'
 end
