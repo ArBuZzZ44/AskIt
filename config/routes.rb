@@ -5,4 +5,5 @@ Rails.application.routes.draw do
    root "pages#index"
    get '/questions', to: 'questions#index' # localgost/questions 
    get '/questions/new', to: 'questions#new'
+   post '/questions', to: 'questions#create' 
 end
