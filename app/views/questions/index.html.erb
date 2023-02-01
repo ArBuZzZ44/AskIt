@@ -1,15 +1,23 @@
-<h1>Questions</h1>
+<h1 class="mb-4">Questions</h1>
 
 <% @questions.each do |question| %>
-	<h2><%= question.title %></h2>
-	<time datetime="<%= question.formatted_created_at %>">
-		<%= question.formatted_created_at %>		
-	</time>
-	<p>
-		<%= question.body %>
-	<br />
-		<%= link_to 'Show', question_path(question) %> |
-		<%= link_to 'Edit', edit_question_path(question) %> |
-		<%= link_to 'Delete', question_path(question), data: { 'turbo-method': :delete, 'turbo-confirm': 'Are you sure?' } %>
-	</p>
+	<article class="card">
+		<div class="card-body">
+			<h4><%= question.title %></h4>
+
+			<section class="card-text">
+				<time datetime="<%= question.formatted_created_at %>">
+					<small><%= question.formatted_created_at %></small>		
+				</time>
+
+				<p class="my-2">
+					<%= question.body %>
+				</p>
+			</section>
+
+			<%= link_to 'Show', question_path(question), class: 'btn btn-primary' %> 
+			<%= link_to 'Edit', edit_question_path(question), class: 'btn btn-secondary' %> 
+			<%= link_to 'Delete', question_path(question), class: 'btn btn-danger', data: { 'turbo-method': :delete, 'turbo-confirm': 'Are you sure?' } %>
+		</div>
+	</article>
 <% end %>
