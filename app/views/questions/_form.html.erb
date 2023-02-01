@@ -1,12 +1,4 @@
-<% if @question.errors.full_messages.any? %>
-	<div class="alert alert-danger">
-		<ul>
-			<% @question.errors.full_messages.each do |msg| %>
-				<li><%= msg %></li>
-			<%  end %>
-		</ul>
-	</div>
-<% end %>
+<%= render 'shared/errors', object: @question %>
 
 <%= form_with model: @question do |f| %>
 	<div class="mb-3 row">
