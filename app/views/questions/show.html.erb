@@ -10,4 +10,4 @@
 
 <%= link_to 'Show', question_path(@question), class: 'btn btn-primary' %> 
 <%= link_to 'Edit', edit_question_path(@question), class: 'btn btn-secondary' %> 
-<%= link_to 'Delete', question_path(@question), class: 'btn btn-danger', data: { 'turbo-method': :delete, 'turbo-confirm': 'Are you sure?' } %>
+<%= button_to 'Delete', question_path(@question), method: :delete, onclick: "return confirm('Are you sure?')", class: 'btn btn-danger' %>
