@@ -21,6 +21,7 @@ class QuestionsController < ApplicationController
 
   def show
     @answer = @question.answers.build
+    @answers = @question.answers.order created_at: :desc
   end
 
   def edit 
