@@ -10,7 +10,7 @@
 
 <%= link_to 'Show', question_path(@question), class: 'btn btn-primary' %> 
 <%= link_to 'Edit', edit_question_path(@question), class: 'btn btn-secondary' %> 
-<%= button_to 'Delete', question_path(@question), method: :delete, onclick: "return confirm('Are you sure?')", class: 'btn btn-danger' %>
+<%= button_to 'Delete', question_path(@question), method: :delete, onclick: "return confirm('Are you sure?')", class: 'btn btn-danger mt-3' %>
 
 <hr class="my-3">
 
@@ -30,4 +30,16 @@
 	</div>
 
 	<%= f.submit "Submit answer!", class: 'btn btn-primary' %>
+<% end %>
+
+<h2 class="mt-4">Answers</h2>
+
+<% @answers.each do |answer| %>
+	<time datetime="<%= answer.formatted_created_at %>">
+		<%= answer.formatted_created_at %>		
+	</time>
+
+	<p>
+		<%= answer.body %>
+	</p>
 <% end %>
