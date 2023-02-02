@@ -35,11 +35,15 @@
 <h2 class="mt-4">Answers</h2>
 
 <% @answers.each do |answer| %>
-	<time datetime="<%= answer.formatted_created_at %>">
-		<%= answer.formatted_created_at %>		
-	</time>
+	<article class="mb-3">
+		<time datetime="<%= answer.formatted_created_at %>">
+			<%= answer.formatted_created_at %>		
+		</time>
 
-	<p>
-		<%= answer.body %>
-	</p>
+		<p>
+			<%= answer.body %>
+		</p>
+
+		<%= button_to 'Delete', question_answer_path(@question, answer), method: :delete, onclick: "return confirm('Are you sure?')", class: 'btn btn-danger btn-sm' %>
+	</article>
 <% end %>
