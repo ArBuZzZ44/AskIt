@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :set_question, only: %i[show destroy edit update]
+  before_action :set_question!, only: %i[show destroy edit update]
 
   def index
     @questions = Question.all
@@ -20,6 +20,7 @@ class QuestionsController < ApplicationController
   end
 
   def show
+    @answer = @question.answers.build
   end
 
   def edit 
@@ -46,7 +47,7 @@ class QuestionsController < ApplicationController
     params.require(:question).permit(:title, :body)
   end
 
-  def set_question
+  def set_question!
     @question = Question.find params[:id]
   end
 end
