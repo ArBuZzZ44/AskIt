@@ -8,7 +8,7 @@
 </time>
 
 <p class="lead my-3">
-	<%= @question.body %>
+	<%= sanitize @question.body %>
 </p>
 
 <%= link_to 'Show', question_path(@question), class: 'btn btn-primary' %> 
@@ -32,7 +32,7 @@
 				</time></small>
 
 				<p class="mt-2 mb-3">
-					<%= answer.body %>
+					<%= sanitize answer.body %>
 				</p>
 			</section>
 
