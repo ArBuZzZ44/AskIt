@@ -10,7 +10,7 @@
 			</p>
 		</section>
 
-		<%= link_to 'Edit', edit_question_answer_path(@question, answer), class: 'btn btn-info btn-sm' %>
-		<%= button_to 'Delete', question_answer_path(@question, answer), method: :delete, onclick: "return confirm('Are you sure?')", class: 'btn btn-danger btn-sm mt-3' %>
+		<%= link_to 'Edit', edit_question_answer_path(question, answer), class: 'btn btn-info btn-sm' %>
+		<%= button_to 'Delete', question_answer_path(question, answer), method: :delete, onclick: "return confirm('Are you sure?')", class: 'btn btn-danger btn-sm mt-3' %>
 	</div>
 </article>

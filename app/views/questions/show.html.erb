@@ -23,4 +23,6 @@
 
 <h2 class="mt-4">Answers</h2>
 
-<%= render @answers %>
+<!-- рендерим паршл, рендерим именно коллекцию @answers, т.е. рендерим поочереди, дальше говорим, как называются элементы коллекции 
+ и в локальную переменную question передаем значение глобальной переменной -->
+<%= render partial: 'answers/answer', collection: @answers, as: :answer, locals: {question: @question} %>
