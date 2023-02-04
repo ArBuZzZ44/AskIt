@@ -3,6 +3,8 @@
 
 <h1 class="mb-4">Questions</h1>
 
+<%= paginate @questions %>
+
 <%= link_to 'New question', new_question_path, class: 'btn btn-primary btn-lg' %>
 
 <% @questions.each do |question| %>
@@ -16,7 +18,8 @@
 				</time>
 
 				<p class="my-2">
-					<%= strip_tags question.body %>
+					<!-- strip_tags - убирает html теги, truncate - ограничивает вывод до определенной длины -->
+					<%= truncate strip_tags(question.body), length: 150 %> 
 				</p>
 			</section>
 
