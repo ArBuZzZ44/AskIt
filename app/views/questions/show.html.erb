@@ -27,4 +27,4 @@
  и в локальную переменную question передаем значение глобальной переменной -->
 <%= render partial: 'answers/answer', collection: @answers, as: :answer, locals: {question: @question} %>
 
-<%== pagy_bootstrap_nav @pagy%>
+<%== pagy_bootstrap_nav(@pagy) if @pagy.pages > 1 %>
