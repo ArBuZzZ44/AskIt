@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   private
   
   def current_user
-    @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id].present?
+    @current_user ||= User.find_by(id: session[:user_id]).decorate if session[:user_id].present? # задекорировали, теперь метод можем использовать
   end
 
   def user_signed_in?

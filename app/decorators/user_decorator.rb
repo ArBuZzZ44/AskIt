@@ -1,13 +1,14 @@
 class UserDecorator < ApplicationDecorator
-  delegate_all
+  delegate_all # данная строка нужна, чтобы делегировать неизвестные методы самому объекту, который мы декорируем.
+# декараторы нужны для добавления к существующим объектам каких-либо дополнительных методов, эти методы включают в себя логику,
+# связанную с отображением этого объекта. эти методы не живут в глобальном пространстве имен, как хелперы, а только для данных объектов
 
-  # Define presentation-specific methods here. Helpers are accessed through
-  # `helpers` (aka `h`). You can override attributes, for example:
-  #
-  #   def created_at
-  #     helpers.content_tag :span, class: 'time' do
-  #       object.created_at.strftime("%a %m/%d/%y")
-  #     end
-  #   end
+def name_or_email
+  if name.present?
+    name
+  else
+    email.split('@')[0]
+  end
+end
 
 end
