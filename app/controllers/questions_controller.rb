@@ -4,6 +4,7 @@ class QuestionsController < ApplicationController
   def index
     #метод pagy возвращает массив из двух элементов. передаем объект, который хотим разбить по страницам
     @pagy, @questions = pagy Question.order(created_at: :desc)
+    @questions = @questions.decorate
   end
 
   def new
@@ -21,8 +22,10 @@ class QuestionsController < ApplicationController
   end
 
   def show
+    @question = @question.decorate
     @answer = @question.answers.build
     @pagy, @answers = pagy @question.answers.order(created_at: :desc)
+    @answers = @answers.decorate
   end
 
   def edit 
