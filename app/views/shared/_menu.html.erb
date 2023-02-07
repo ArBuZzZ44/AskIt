@@ -14,7 +14,8 @@
                 data: {"bs-toggle": 'dropdown'}, current_page: current_page %>
 
               <ul class="dropdown-menu">
-                <li><%= link_to 'Log Out', '#', class: 'dropdown-item' %></li>
+                <li><%= button_to 'Log Out', session_path, method: :delete, onclick: "return confirm('Are you sure?')", 
+                  class: 'dropdown-item' %></li>
               </ul>
             </li>
           <% else %>
