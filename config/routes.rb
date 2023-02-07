@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :session, only: %i[new create destroy] # для входа в пользователя в систему, destroy, чтобы пользователь мог выходить
+  resources :sessions, only: %i[new create destroy] # для входа в пользователя в систему, destroy, чтобы пользователь мог выходить
 
   resources :users, only: %i[new create]
 
