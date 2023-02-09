@@ -106,6 +106,8 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    jsbundling-rails (1.1.1)
+      railties (>= 6.0.0)
     loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -157,6 +159,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.5.0)
       loofah (~> 2.19, >= 2.19.1)
+    rails-i18n (7.0.6)
+      i18n (>= 0.7, < 2)
+      railties (>= 6.0.0, < 8)
     railties (7.0.4.2)
       actionpack (= 7.0.4.2)
       activesupport (= 7.0.4.2)
@@ -206,15 +211,17 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap
-  cssbundling-rails
+  cssbundling-rails (~> 1.0)
   debug
   draper
   faker
   importmap-rails
   jbuilder
+  jsbundling-rails (~> 1.0)
   pagy
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.2)
+  rails-i18n (~> 7)
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
