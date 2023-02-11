@@ -166,6 +166,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@hotwired/stimulus@npm:^3.2.1":
+  version: 3.2.1
+  resolution: "@hotwired/stimulus@npm:3.2.1"
+  checksum: 2617b10fb3ca0fb05205526693cbc9ea17fca84f40d8d95d0ce8d58f903aa74e020da858adc72f056f777f4854bdd7f5ee6d69810ecb17412af43d6ffb78997e
+  languageName: node
+  linkType: hard
+
+"@hotwired/turbo-rails@npm:^7.2.5":
+  version: 7.2.5
+  resolution: "@hotwired/turbo-rails@npm:7.2.5"
+  dependencies:
+    "@hotwired/turbo": ^7.2.5
+    "@rails/actioncable": ^7.0
+  checksum: 5b0bc4c5379c6577e616c5cf3cb36029dfa4151b0d16518137ac38f054128c5772cd5ea389ce0edb96bd3d99de0d0de1a532a07601bb0159fd088788cfe4f7be
+  languageName: node
+  linkType: hard
+
+"@hotwired/turbo@npm:^7.2.5":
+  version: 7.2.5
+  resolution: "@hotwired/turbo@npm:7.2.5"
+  checksum: 13992a1fa98978f1caea533b68e8514f62bc16291ca4a8eb526d531cfc43560de7bdc0d3c931b46ba364704b72520899975cae1100afc079fcb3447252d88a8e
+  languageName: node
+  linkType: hard
+
 "@npmcli/fs@npm:^2.1.0":
   version: 2.1.2
   resolution: "@npmcli/fs@npm:2.1.2"
@@ -190,6 +214,13 @@ __metadata:
   version: 2.11.6
   resolution: "@popperjs/core@npm:2.11.6"
   checksum: 47fb328cec1924559d759b48235c78574f2d71a8a6c4c03edb6de5d7074078371633b91e39bbf3f901b32aa8af9b9d8f82834856d2f5737a23475036b16817f0
+  languageName: node
+  linkType: hard
+
+"@rails/actioncable@npm:^7.0":
+  version: 7.0.4
+  resolution: "@rails/actioncable@npm:7.0.4"
+  checksum: b31cae40511a3df4d3048779255219b92f7dd89514f3c9f2da2b219b9b0635261b17b05031c7070756d319bf9165d4d6c021a820b110d53a3e6c441a062accdd
   languageName: node
   linkType: hard
 
@@ -253,6 +284,20 @@ __metadata:
   checksum: 3e044fd6d1d26545f235a9fe4d7a534e2029d8e59fa7fd9f2a6eb21230f6b5380ea1eaf55136e60cbf8e613544b3b766e7a6fa2102e2a3a117505466e3025dc2
   languageName: node
   linkType: hard
+
+"app@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "app@workspace:."
+  dependencies:
+    "@hotwired/stimulus": ^3.2.1
+    "@hotwired/turbo-rails": ^7.2.5
+    "@popperjs/core": ^2.11.6
+    bootstrap: ^5.2.3
+    bootstrap-icons: ^1.10.3
+    esbuild: ^0.17.6
+    sass: ^1.58.0
+  languageName: unknown
+  linkType: soft
 
 "aproba@npm:^1.0.3 || ^2.0.0":
   version: 2.0.0
@@ -1106,18 +1151,6 @@ __metadata:
   checksum: 87f4164e396f0171b0a3386cc1877a817f572148ee13a7e113b238e48e8a9f2f31d009a92ec38a591ff1567d9662c6b67fd8818a2dbbaed74bc26a87a2a4a9a0
   languageName: node
   linkType: hard
-
-"root-workspace-0b6124@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "root-workspace-0b6124@workspace:."
-  dependencies:
-    "@popperjs/core": ^2.11.6
-    bootstrap: ^5.2.3
-    bootstrap-icons: ^1.10.3
-    esbuild: ^0.17.6
-    sass: ^1.58.0
-  languageName: unknown
-  linkType: soft
 
 "safe-buffer@npm:~5.2.0":
   version: 5.2.1
